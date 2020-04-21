@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textViewScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnUp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="X X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\nX X X X X X X X X X X X X X X X X X\n "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="\u2193"
+        android:onClick="moveDown"
+         />
+
+    <Button
+        android:id="@+id/btnleft"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnDown"
+        android:layout_toLeftOf="@+id/btnDown"
+        android:text="\u2190" 
+        android:onClick="moveLeft"/>
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnDown"
+        android:layout_toRightOf="@+id/btnDown"
+        android:text="\u2192" 
+        android:onClick="moveRight"/>
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnRight"
+        android:layout_toLeftOf="@+id/btnRight"
+        android:text="\u2191" 
+        android:onClick="moveUp"/>
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnDown"
+        android:layout_alignParentRight="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewPlayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnUp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Reset" 
+        android:onClick="reset"/>
+
+    <TextView
+        android:id="@+id/textViewAvg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewScreen"
+        android:layout_below="@+id/textViewScreen"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
